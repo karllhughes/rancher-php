@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  app:
+    build: .
+    restart: always
+  nginx:
+    image: shiphp/nginx-env
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - NGINX_HOST=app
