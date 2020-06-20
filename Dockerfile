@@ -24,3 +24,4 @@ COPY ./www.conf /usr/local/etc/php-fpm.d/www.conf
 
 # Copy the PHP application
 COPY ./index.php /var/www/public/index.php
+RUN chown -R www-data:www-data /var/www/public
